@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 
 def index(request):
+
     return render(request, 'html/index.html')
 
 def project_list(request):
@@ -17,3 +18,6 @@ def project_description(request):
 
 def about_us(request):
     return render(request, 'html/about_us.html')
+
+def base(request):
+    return render(request,'html/base.html')

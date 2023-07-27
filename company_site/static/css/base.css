@@ -1,0 +1,363 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+   transition: .5s ease-in-out;
+}
+html{
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+    width: 100%;
+}
+
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a{
+    color: #434343;
+    text-decoration: none;
+    position: relative;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header{
+    opacity: 95%;
+    width: 100%;
+    height: 85px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 85px;
+    background: #F6F6F6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    z-index: 100;
+
+}
+
+
+header ul{
+    grid-column-start: 2;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style-type: none;
+    padding: 0;
+}
+
+header ul li{
+    margin-right: 5%;
+
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    width: 45px;
+    height: 25px;
+    border: none;
+    background-image: url("../imgs/burger_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+header .contact img{
+    margin-right: 2%;
+
+}
+header ul li a{
+    color: #434343;
+    text-decoration: none;
+
+
+}
+header .contact {
+    grid-column-start: 3;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header  a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color:rgba(47, 47, 47, 1) ;
+    transition: width .3s;
+    color: rgba(47, 47, 47, 1);
+}
+a:hover::after {
+    width: 100%;
+}
+.logo{
+    grid-column-start: 1;
+    align-self: center;
+}
+
+
+
+footer{
+     margin-top: 2%;
+      height: 150px;
+     background-color: #1F1F1F;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     padding: 20px;
+    font-size: 0.8em;
+    color: #fff;
+}
+
+.contact, .terms, .navigation {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center; /* добавляем это свойство */
+}
+.navigation{
+    text-align: end;
+}
+.contact{
+    text-align: start;
+}
+.contact {
+    align-items: flex-start; /* выравнивает элементы по левому краю */
+}
+
+.terms {
+    align-items: center; /* выравнивает элементы по центру */
+    color: #707070;
+}
+
+.navigation {
+    align-items: flex-end; /* выравнивает элементы по правому краю */
+}
+
+.contact div, .terms div {
+    display: flex;
+    margin-top: 10px;
+}
+.mail_icon{
+    width: 24px;
+    height: 20px;
+}
+.phone_icon{
+    width: 24px;
+    height: 26px;
+}
+.contact p{
+    margin-left: 2%;
+}
+
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+.terms a{
+    text-decoration: underline;
+}
+.navigation ul li {
+    margin-bottom: 5px;
+}
+
+.navigation ul li a {
+    color: #707070 ;
+    text-decoration: underline;
+}
+.header2{
+    display: none;
+}
+
+/*media requests*/
+ #navbar{
+        display: none;}
+
+@media (max-width: 768px) {
+
+    header{
+        width: 100%;
+        column-gap: 2vw;
+    }
+    header ul{
+        display: none;
+    }
+    .contact{
+       grid-column-start: 2;
+       grid-column-end: 2;
+       grid-row-start: 1;
+
+   }
+
+    footer{
+        font-size: 0.8em;
+    }
+      #navbar{
+        display: none;
+        position: fixed;
+        top: 145px;
+        z-index: 100;
+        background-color: white;
+        opacity: 85%;
+        width: 50%;
+        height: 50%;
+    }
+    #navbar ul{
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        height: 100%;
+    }
+    #navbar ul li{
+        align-self: center;
+        justify-self: center;
+        list-style: none;
+    }
+    .header2{
+        display: grid;
+        position: fixed;
+        grid-template-columns: 50% 50%;
+        top: 85px;
+        z-index: 100;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(255, 255, 255);
+        opacity: 85%;
+    }
+
+    .header2_contact{
+        grid-column-start: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: center;
+        justify-self: start;
+        margin-left: 1%;
+        opacity: 100%;
+    }
+    .header2 .burger{
+        grid-column-start: 2;
+        justify-self: end;
+        align-self: center;
+        opacity: 100%;
+    }
+    .burger{
+        display: block;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        margin-right: 5px;
+
+    }
+}
+
+@media (max-width: 426px) {
+     header {
+         width: 100%;
+         grid-template-columns: 100%;
+     }
+    #navbar{
+        display: none;
+        position: fixed;
+        top: 145px;
+        z-index: 100;
+        background-color: white;
+        opacity: 85%;
+        width: 50%;
+        height: 50%;
+    }
+    #navbar ul{
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        height: 100%;
+    }
+    #navbar ul li{
+        align-self: center;
+        justify-self: center;
+        list-style: none;
+    }
+    .header2{
+        display: grid;
+        position: fixed;
+        grid-template-columns: 50% 50%;
+        top: 85px;
+        z-index: 100;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(255, 255, 255);
+        opacity: 85%;
+    }
+
+    .header2_contact{
+        grid-column-start: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: center;
+        justify-self: start;
+        margin-left: 1%;
+        opacity: 100%;
+    }
+    .header2 .burger{
+        grid-column-start: 2;
+        justify-self: end;
+        align-self: center;
+        opacity: 100%;
+    }
+
+    .logo{
+        width: 100%;
+        justify-self: center;
+    }
+    header ul{
+        display: none;
+
+    }
+    #navbar{
+        font-size: 20px;
+    }
+    .contact img, .contact a{
+        display: none;
+   }
+
+    .burger{
+        display: block;
+        grid-column-start: 3;
+        grid-column-end: 3;
+        margin-right: 5px;
+
+    }
+    footer{
+        font-size: 0.8em;
+    }
+}
+
+
+

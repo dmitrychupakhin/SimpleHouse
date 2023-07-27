@@ -1,10 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SimpleHouse | Main Page</title>
-</head>
-<body>
-<h1>Hello, world!</h1>
-</body>
-</html>
+{%extends "html/base.html"%}
+{%load static%}
+
+{%block styles%}
+    <link rel="stylesheet" href="{%static 'css/index.css'%}">
+    <link rel="stylesheet" href="{%static 'css/base.css'%}">
+{%endblock styles%}
+
+{%block content%}
+<main class="first_part">
+    <div class="content">
+        <h1 class="title">Simple House - where your dreams come true!</h1>
+        <p class="text">Feel calm knowing that your building plans are in good hands. Our professional team and 10
+            years of experience turn your ideas into a dream home. Contact us now to start your journey to comfort
+            and coziness!
+        </p>
+        <div class="buttons">
+        <a href="{% url 'services' %}" class="button_learn">Learn more</a>
+        <a href="{% url 'services' %}" class="button_contact">Contact us</a>
+        </div>
+    </div>
+</main>
+<div class="widgets">
+    <a href="#projects"><div class="first">
+        <h1>Recent projects from SimpleHouse</h1>
+    </div></a>
+    <a href="#services"><div class="second">
+        <h1>Check out our services</h1>
+    </div></a>
+    <a href="#calculator"><div class="third">
+        <h1>Make preliminary calculations</h1>
+    </div></a>
+
+</div>
+<div class="services" id="services">
+    <div class="services_text">
+        <h1 class="block_title" >The Palette Of Possibilities</h1>
+    <p class="block_text">Possessing the necessary knowledge and professional resources, we bring unique works to life.
+        Our products become a discovery, an alternative to the usual. The first-class quality of our works ensures
+        happiness for many years.</p>
+    </div>
+    <p class="citate">Do you dream about the future?
+        We will make it a reality.</p>
+     <div class="services_images">
+        <div class="service service1">
+            <p class="image-text">Planning and design</p>
+        </div>
+        <div class="service service2">
+            <p class="image-text">Construction</p>
+        </div>
+        <div class="service service3">
+            <p class="image-text">Repair and improvement</p>
+        </div>
+    </div>
+    <a href="{%url 'services'%}" class="white_button">Go to services</a>
+
+</div>
+<div class="calculator" id="calculator">
+    <div class="calculator_text">
+        <h1 class="block_title">Preliminary calculation</h1>
+    <p class="block_text">The "Preliminary calculation" section is your personal assistant in planning the budget for future construction.
+        Thanks to our innovative calculator, you can independently calculate the approximate cost of the project,
+        taking into account various types of construction.
+    </p>
+    </div>
+    <div class="calculations">
+    <h1>Calculations</h1>
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <h3>Project scope:</h3>
+                <select>
+                    <option>Turnkey solution</option>
+                    <option>Turnkey solution</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <h3>Area, m<sup>2</sup>:</h3>
+                <input type="number">
+            </div>
+        </div>
+        <button type="submit">Calculate</button>
+    </form>
+</div>
+
+    <div class="result">
+         <h2>Approximate cost:</h2>
+        <h3>0.00$</h3>
+    </div>
+
+</div>
+
+<div class="projects" id="projects">
+    <div class="projects_text">
+        <h1 class="block_title" >Our projects</h1>
+    <p class="block_text">Discover our gallery of projects, where each house is the realization of your wildest dreams.
+Your desire to build a house is the beginning of a great adventure, and we are here to become your reliable partner
+        on this path.</p>
+    </div>
+    <p class="citate">Perfection in every brick</p>
+     <div class="projects_images">
+        <div class="project project1">
+            <p class="image-text">Tiny House A-Frame</p>
+        </div>
+        <div class="project project2">
+            <p class="image-text">Fishing and recreation complex</p>
+        </div>
+        <div class="project project3">
+            <p class="image-text">GlassBox</p>
+        </div>
+    </div>
+    <a href="{%url 'project_list'%}" class="white_button">Go to projects</a>
+</div>
+
+{%endblock content%}}

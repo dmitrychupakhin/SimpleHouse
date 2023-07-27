@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{%block title%}Simple House{%endblock title%}</title>
+
+    <link rel="stylesheet" href="{%static 'css/base.css?v=1'%}">
+    {%block styles%}
+    {%endblock styles%}
+</head>
+<body>
+<header id="header">
+    <img src="{% static 'imgs/logo.png'%}" alt="" width="351px" class="logo" id="logo">
+    <ul>
+        <li><a href="{%url 'index'%}">Main page</a></li>
+        <li><a href="{%url 'project_list'%}">Our Projects</a></li>
+        <li><a href="{%url 'services'%}">Services</a></li>
+        <li><a href="{%url 'about_us'%}">About us</a></li>
+    </ul>
+
+ <div class="contact" id="contact">
+            <img src="{%static 'imgs/Whatsapp_logo.png'%}" alt="" width="25px">
+            <a href="">+41767489403</a>
+        </div>
+
+</header>
+   <div class="header2">
+        <div class="header2_contact" id="header2_contact">
+            <img src="{%static 'imgs/Whatsapp_logo.png'%}" alt="" width="25px">
+            <a href="">+41767489403</a>
+        </div>
+        <div class="burger" id="burger"></div>
+    </div>
+     <div id="navbar">
+            <ul>
+                <li><a href="{%url 'index'%}">Main page</a></li>
+                <li><a href="{%url 'project_list'%}">Our Projects</a></li>
+                <li><a href="{%url 'services'%}">Services</a></li>
+                <li><a href="{%url 'about_us'%}">About us</a></li>
+            </ul>
+        </div>
+
+{%block content%}
+
+{%endblock content%}
+
+<footer>
+<div class="contact">
+        <h3>Contact</h3>
+        <div>
+            <img src="{%static 'css/PhoneLogo.png'%}" class="phone_icon" alt="">
+            <p>+123 456 7890</p>
+        </div>
+        <div>
+            <img src="{%static 'css/MailLogo.png'%}" class="mail_icon" alt="">
+            <p>example@example.com</p>
+        </div>
+    </div>
+    <div class="terms">
+        <a href="">Terms of use</a>
+    </div>
+    <div class="navigation">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="{%url 'index'%}">Main Page</a></li>
+            <li><a href="{% url 'services'%}">Services</a></li>
+            <li><a href="{% url 'project_list'%}">Projects</a></li>
+            <li><a href="{% url 'about_us'%}">About us</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+    <script src="{%static 'js/base.js'%}"></script>
+
+</html>
