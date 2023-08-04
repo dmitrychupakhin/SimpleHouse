@@ -1,2 +1,83 @@
 {%extends "html/base.html"%}
 {%load static%}
+{%block styles%}
+<link rel="stylesheet" href="{%static 'css/about_us.css'%}">
+{%endblock styles%}
+{%block content%}
+<div class="first_part"></div>
+<div class="text_block">
+        <h1 class="block_title" >About us</h1>
+    <p class="block_text">The About Us section is a mirror of our work, experience, and passion for what we do.
+        We invite you to immerse yourself in our history, get to know our team and values. Discover our unique approach
+        to work, our achievements and how we are proud to change the world around us.
+    </p>
+</div>
+    <div class="about_company">
+        <img src="{%static 'imgs/first_image.png'%}" alt="">
+        <div class="text">
+            <h1>About the company</h1>
+    <p>"SIMPLE HOUSE" is not just a construction company, it is a team of like-minded people who create not only houses,
+        but also everything you need for a comfortable life. Thanks to our diligence, professionalism and experience
+        of more than 10 years, we have been successfully implementing projects of any complexity.
+        We are united by a common mission - to provide our clients with the best services and exceed their expectations
+        in every project.
+        We have completed many projects of varying complexity, which demonstrates our flexibility, adaptability and readiness
+        for new challenges. We do not just implement projects, we create optimal solutions for our clients' lives
+        by combining creativity, technology and quality.
+
+        "SIMPLE HOUSE is not just a name, it is a symbol of responsibility, reliability and high quality.
+        We are constantly striving for excellence and are interested in making sure that our customers are satisfied
+        not only with the process of cooperation, but also with the result of our work. We are confident that any dream
+        can become a reality, and we are ready to help you with this.
+        Choose SIMPLE HOUSE and we will change your world for the better!
+    </p>
+        </div>
+
+    </div>
+    <div class="black_line">
+        <div class="item1">
+            <img src="{%static 'imgs/icon _timer.png'%}" alt="">
+            <h1>Punctuality</h1>
+        </div>
+         <div class="item2">
+            <img src="{%static 'imgs/icon _box search.png'%}" alt="">
+            <h1>Quality</h1>
+        </div>
+         <div class="item3">
+            <img src="{%static 'imgs/icon _lamp.png'%}" alt="">
+            <h1>Creativity</h1>
+        </div>
+    </div>
+
+<div class="about_team">
+        <img src="{%static 'imgs/team_photo.png'%}" alt="">
+        <div class="text">
+            <h1>Our team</h1>
+    <p>Our team is the heart of our company. Each member of our team is a highly qualified professional who is dedicated
+        to his or her work and continuously improves their skills. We are united by a common mission - to provide our
+        clients with the best services and strive to exceed their expectations in every project.
+        We value creativity, innovative ideas and teamwork. In every task we undertake, we demonstrate not only a
+        high level of professionalism, but also a desire for excellence, customer care and unwavering respect for our
+        work. Together, we are a powerful team of professionals ready to meet any challenge and create solutions that
+        will change your world for the better. Our team is our pride, and we are confident that it is thanks to their
+        efforts, professionalism and talent that we are achieving great success in our field.
+    </p>
+        </div>
+
+    </div>
+
+    <div class="black_line">
+        <div class="item1">
+            <img src="{%static 'imgs/icon _heart.png'%}" alt="">
+            <h1>Mutual respect</h1>
+        </div>
+         <div class="item2">
+            <img src="{%static 'imgs/icon _people.png'%}" alt="">
+            <h1>Cooperation</h1>
+        </div>
+         <div class="item3">
+            <img src="{%static 'imgs/icon _briefcase.png'%}" alt="">
+            <h1>Professionality</h1>
+        </div>
+    </div>
+{%endblock content%}

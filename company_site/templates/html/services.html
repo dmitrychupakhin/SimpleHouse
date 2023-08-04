@@ -1,2 +1,48 @@
 {%extends "html/base.html"%}
 {%load static%}
+{%block styles%}
+<link rel="stylesheet" href="{%static 'css/services.css'%}">
+{%endblock styles%}
+{%block content%}
+<div class="first_part"></div>
+
+<div class="text_block">
+        <h1 class="block_title" >Our Services</h1>
+    <p class="block_text">Our Services section is an indicator of our professionalism and passion for providing high
+        quality services. We invite you to explore the wide range of services we proudly provide to our clients.
+        Discover the unique opportunities that we have been able to realise with the help of our qualified team.
+    </p>
+</div>
+<div class="container">
+<div class="service">
+        <img src="{%static 'imgs/Service1_test.png'%}" alt="">
+        <div class="service_text">
+            <a href="">Planning and design</a>
+        </div>
+    </div>
+    <div class="service">
+        <img src="{%static 'imgs/Service1_test.png'%}" alt="">
+        <div class="service_text">
+            <a href="">Planning and design</a>
+        </div>
+    </div>
+     <div class="service">
+        <img src="{%static 'imgs/Service1_test.png'%}" alt="">
+        <div class="service_text">
+            <a href="">Planning and design</a>
+        </div>
+    </div>
+    <div class="service">
+        <img src="{%static 'imgs/Service1_test.png'%}" alt="">
+        <div class="service_text">
+            <a href="">Planning and design</a>
+        </div>
+</div>
+     <div class="service">
+        <img src="{%static 'imgs/Service1_test.png'%}" alt="">
+        <div class="service_text">
+            <a href="">Planning and design</a>
+        </div>
+</div>
+    </div>
+{%endblock content%}
